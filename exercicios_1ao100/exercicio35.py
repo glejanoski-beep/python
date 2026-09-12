@@ -51,3 +51,5 @@ Estudante:
 s
 Valor do ingresso: 15.0
 '''
+
+input("Pressione Enter para sair...")
