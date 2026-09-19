@@ -122,3 +122,163 @@ print(f'\nPilha vazia agora? {pilha_vazia(pratos)}')
 print('='*50)
 
 # 4 - Inverter uma string usando pilha
+
+def inverter_string(texto):
+    pilha = []
+
+    # Empilhando caracter
+    for caracter in texto:
+        pilha.append(caracter)
+
+    # Desempilhar para inverter
+    invertido = ''
+    while len(pilha) > 0:
+        invertido += pilha.pop()
+
+    return invertido
+
+texto_original = 'Python'
+texto_invertido = inverter_string(texto_original)
+
+print(f'Texto Original: {texto_original}')
+print(f'Texto Invertido: {texto_invertido}')
+
+print('\n' + '='*55 + '\n')
+
+# 5 - Verificando parênteses balanceados
+
+print('5 - Verificando parênteses balanceados')
+print('='*55)
+
+def parenteses_balanceados(expressao):
+    pilha = []
+    pares = {'(': ')', '[': ']', '{': '}'}
+
+    for caracter in expressao:
+        if caracter in pares:               # Abre
+            pilha.append(caracter)
+        elif caracter in pares.values():    # Fecha
+            if len(pilha) == 0:
+                return False
+            abre = pilha.pop()
+            if pares[abre] != caracter:
+                return False
+
+    return len(pilha) == 0
+
+expressoes = [
+    '((a + b) * c)',
+    '([{a}])',
+    '((a + b)',
+    '([)]',
+    '{ a + [ b * (c / d)]}'
+]
+
+for expr in expressoes:
+    resultado = parenteses_balanceados(expr)
+    status = 'Balanceado' if resultado else 'Nao balanceado'
+    print(f'{expr:20} -> {status}')
+
+
+print('\n' + '='*55 + '\n')
+
+# 6 - Desfazer (undo) / refazer (redo)
+
+print('SISTEMA DE DESFAZER/REFAZER\n')
+
+class EditorTexto:
+    def __init__(self):
+        self.historico_desfazer = []
+        self.historico_refazer = []
+        self.texto = ''
+
+    def adicionar_texto(self, texto):
+        self.historico_desfazer.append(self.texto)
+        self.texto += texto
+        self.historico_refazer = []  # Limpa redo
+        print(f" + texto adicionado: '{self.texto}'")
+
+    def desfazer(self):
+        if len(self.historico_desfazer) > 0:
+            self.historico_refazer.append(self.texto)
+            self.texto = self.historico_desfazer.pop()
+            print(f'Refeito: {self.texto}\n')
+        else:
+            print('Nada para desfazer\n')
+
+    def refazer(self):
+        if len(self.historico_refazer) > 0:
+            self.historico_desfazer.append(self.texto)
+            self.texto = self.historico_refazer.pop()
+            print(f'Desfeito: {self.texto}')
+        else:
+            print('Nada para refazer')
+
+    def mostrar_texto(self):
+        print(f'Texto atual: {self.texto}')
+
+
+editor = EditorTexto()
+
+editor.adicionar_texto('hello')
+editor.adicionar_texto('World')
+editor.mostrar_texto()
+print()
+
+editor.desfazer()
+editor.mostrar_texto()
+print()
+
+editor.refazer()
+editor.mostrar_texto()
+print()
+
+editor.adicionar_texto(' ')
+editor.adicionar_texto('!')
+editor.mostrar_texto()
+
+# 7 - Comparação PILHA vs FILA
+
+print('Comparação pilha vs fila\n')
+
+print('Pilha (stack) - LIFO:')
+print('ultimo a entrar, primeiro a sar')
+print('Usa append() e pop()')
+print('Exemplos: historico, undo/redo, navegação')
+
+print()
+
+print('FILA (Queue) - FIFO:')
+print('primeiro a entrar, primeiro a sar')
+print('usa append() e pop(0)')
+print('Exemplos: fila de atendimento, processamento de tarefas\n')
+
+# 8 - Converter para decimal usando pilha
+
+print('\n' + '='*55 + '\n')
+print('Converter para decimal usando pilha')
+print('='*55)
+
+def binario_para_decimal(binario_str):
+    pilha = []
+    potencia = 0
+
+    # Coloca cada código na pilha
+    for digito in binario_str:
+        pilha.append(int(digito))
+
+    # Remove da pilha (de tras para frente) e calcula
+    decimal = 0
+    while len(pilha) > 0:
+        digito = pilha.pop()
+        decimal += digito * (2 ** potencia)
+        potencia += 1
+
+    return decimal
+
+binarios = ['101', '1010', '11111', '10000']
+
+for bin_num in binarios:
+    decimal = binario_para_decimal(bin_num)
+    print(f'{bin_num} (binario) = {decimal} (decimal)')
+
