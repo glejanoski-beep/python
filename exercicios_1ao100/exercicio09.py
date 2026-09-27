@@ -11,7 +11,7 @@ print(f"Novo salário: {round(salario + aumento, 2)}")
 
 # Inclusão para validação final
 print(f"Validação: {round(novo_salario - salario, 2)}")
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 

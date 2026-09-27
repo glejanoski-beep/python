@@ -15,7 +15,7 @@ if prestacao <= limite:
 else:
     print(f"Negado")
 
-
+input("Pressione Enter para sair..."))
 '''
 TESTE 1 
 Valor do imóve: 120000.0

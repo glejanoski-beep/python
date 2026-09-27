@@ -12,7 +12,7 @@ elif IMC >= 25 and IMC < 30:
 else:
     print("Faixa Elevada")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite o peso em quilogramas: 50

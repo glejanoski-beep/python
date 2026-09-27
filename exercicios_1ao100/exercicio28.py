@@ -11,7 +11,7 @@ else:
     print("Não formam um triangulo")
 
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Digite o primeiro valor: 2

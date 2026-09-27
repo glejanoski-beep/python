@@ -9,6 +9,7 @@ else:
     print(f"Valores são iguais")
 
 
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite o primeiro valor: 10

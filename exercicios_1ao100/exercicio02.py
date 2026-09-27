@@ -7,6 +7,7 @@ media = (nota1 + nota2) / 2
 
 print(f"A média aritmética das notas é: {media}")
 
+input("Pressione Enter para sair...")
 # teste 1
 # nota1 = 5,5 e nota = 7,5 ---- Média = 6,5
 

@@ -9,6 +9,8 @@ elif idade >= 18 and idade <= 69:
 else:
     print("Voto Opcional")
 
+
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Digite sua idade: 15

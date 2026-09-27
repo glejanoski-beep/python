@@ -7,7 +7,7 @@ print(f"Antecessor: {antecessor}")
 print(f"Numero: {num}")
 print(f"Sucessor: {sucessor}")
 
-
+input("Pressione Enter para sair...")
 # teste 1 
 # Antecessor: 9
 # Numero: 10

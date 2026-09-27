@@ -15,7 +15,7 @@ print(f"Total: R${total}")
 # VALIDAÇÃO FINAL 
 
 print(f"validação: R${total - subtotal}")
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Preço unitário: R$10.0

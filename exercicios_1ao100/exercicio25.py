@@ -10,7 +10,7 @@ elif opcao == 3:
 else:
     print(f"Preço: {preco}\n Opção: {opcao}\n\n Valor Final: {preco + (preco * 0.08)}")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 reço: 200.0

@@ -8,6 +8,7 @@ print(f"Dobro: {dobro}")
 print(f"Triplo: {triplo}")
 print(f"Metade: {metade}")
 
+input("Pressione Enter para sair...")
 # teste 1
 # numero = 15
 # Dobro: 30.0

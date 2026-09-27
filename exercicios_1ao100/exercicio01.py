@@ -5,7 +5,7 @@ soma = int(primeiro_valor) + int(segundo_valor)
 
 print(F"A soma dos dois numeros é: {soma}" )
 
-
+input("Pressione Enter para sair...")
 # testes 1 
 # 10 + 25 = 35 
 

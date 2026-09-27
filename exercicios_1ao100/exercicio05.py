@@ -7,7 +7,7 @@ print(f"Metros: {metros}\n")
 print(f"Centimetros: {centimentros}")
 print(f"Milimetros: {milimetros}")
 
-
+input("Pressione Enter para sair...")
 
 '''
 TESTE 1

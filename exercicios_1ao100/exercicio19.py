@@ -17,7 +17,7 @@ print(f"Maior numero: {max(numeros3)}")
 print(f"Menor numero: {min(numeros3)}")
 
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE
 

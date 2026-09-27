@@ -11,7 +11,7 @@ print(f"Preço Final: {preco - desconto}")
 
 # Incluí após verificar que tinha mais casas decimais do que o solicitado 
 print(f"Preço Final (com round): {precofinal}")
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 

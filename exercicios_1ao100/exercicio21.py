@@ -8,7 +8,7 @@ if media >= 7:
 else:
     print(f"Não foi dessa vez! Reprovado. Média: {media}")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite a primeira nota: 5

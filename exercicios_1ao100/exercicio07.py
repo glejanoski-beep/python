@@ -5,6 +5,7 @@ fahrenheit = celcius * 9 / 5 + 32
 print(f"Temperatura em °C: {celcius}")
 print(f"Temperatura em °F: {fahrenheit}")
 
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Temperatura em °C: 0

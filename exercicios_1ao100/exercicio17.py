@@ -8,6 +8,8 @@ else:
     print("ÍMPAR")
 
 
+input("Pressione Enter para sair...")
+
 '''
 TESTE 1
 Digite um valor: 12

@@ -9,6 +9,7 @@ elif num % 3 != 0 and num % 5 == 0:
 else:
     print(f"O numero {num} NÃO É disivível apenas por 3 NEM por 5")
 
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 O numero 30  É divisível por 3 e 5

@@ -11,7 +11,7 @@ elif salario > 1500 and salario < 3000:
 else:
     print(f"Ajuste de 5%. Adicional de {round(ajuste3, 2)}. Novo Salário: {round(salario + ajuste3, 2)}")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Digite o salário: 1500

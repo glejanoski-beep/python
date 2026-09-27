@@ -7,7 +7,7 @@ print(f"Salário fixo: R${salario_base}")
 print(f"Total vendido: R${total_vendido}\n")
 print(f"Comissão: {comissao:.2f}")
 print(f"Salário Total: {round(salario_base + comissao, 2)}")
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 

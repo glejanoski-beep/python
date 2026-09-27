@@ -20,7 +20,7 @@ A = aux
 print(f"\nSegunda da troca: ")
 print(f"A: {A}")
 print(f"B: {B}")
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 

@@ -10,7 +10,7 @@ elif media < 7 and media > 5:
 else:
     print(f"Média: {media}. Reprovado.")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite a primeira nota: 4

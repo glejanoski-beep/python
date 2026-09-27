@@ -21,7 +21,7 @@ else:
     else:
         print("Mês inválido")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Digite um valor de 1 a 12: 2

@@ -10,7 +10,7 @@ print(f"numeros 1: {numeros1}")
 print(f"\nnumeros 2: {numeros2}")
 print(f"\nnumeros 3: {numeros3}")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE
 numeros 1: [3, 5, 9]

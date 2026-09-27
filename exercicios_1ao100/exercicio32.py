@@ -5,7 +5,7 @@ if num >= 10 and num <= 20:
 else:
     print("FORA")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite um valor: 9.9

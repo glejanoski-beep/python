@@ -15,7 +15,7 @@ if a < (b + c) and b < (a + c) and c < (a + b):
 else:
     print("Não formam um triangulo")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite o primeiro valor: 555

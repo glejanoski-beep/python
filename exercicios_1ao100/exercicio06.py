@@ -9,7 +9,7 @@ print(f"Altura: {altura}\n")
 print(f"Área: {area}")
 print(f"Perímetro: {perimetro}\n")
 
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1
 Digite o valor da largura: 4

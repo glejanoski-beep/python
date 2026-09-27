@@ -12,7 +12,7 @@ else:
 print(res1)
 print(res2)
 print(res3)
-
+input("Pressione Enter para sair...")
 '''
 TESTE 1 
 Digite um ano: 2023
