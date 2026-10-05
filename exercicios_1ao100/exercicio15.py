@@ -14,7 +14,7 @@ print(f"Total: R${total}")
 
 # VALIDAÇÃO FINAL 
 
-print(f"validação: R${total - subtotal}")
+print(f"validação: R${total - subtotal:.2f}")
 input("Pressione Enter para sair...")
 '''
 TESTE 1 
