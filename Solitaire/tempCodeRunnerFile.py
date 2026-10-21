@@ -1,0 +1,1 @@
+pagina.add(ft.Stack(controls= controls width=1000, height=500))  
