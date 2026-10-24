@@ -1,82 +1,46 @@
+# CARD_OFFSET = 20
+SOLITAIRE_WIDTH = 1000
+SOLITAIRE_HEIGHT = 500
+
 import flet as ft
+from card import Card
+from slot import Slot
 
-class Solitaire:
+
+class Solitaire(ft.Stack):
     def __init__(self):
-        self.start_top = 0
-        self.start_left = 0
+        super().__init__()
+        # self.start_top = 0
+        # self.start_left = 0
+        self.controls = []
+        self.slots = []
+        # self.card_offset = CARD_OFFSET
+        self.width = SOLITAIRE_WIDTH
+        self.height = SOLITAIRE_HEIGHT
 
+    def did_mount(self):
+        self.create_card_deck()
+        self.create_slots()
+        self.deal_cards()
 
-def main(pagina: ft.Page):
-    def drag(evento: ft.DragUpdateEvent):
-        evento.control.top = max(0, evento.control.top + evento.local_delta.y)
-        evento.control.left = max(0, evento.control.left + evento.local_delta.x)
-        evento.control.update()
+                                                                 # no parametro image, passamos o local da imagem
+    def create_card_deck(self):
+        card1 = Card(self, color="GREEN", image="mario.jpg")
+        card2 = Card(self, color="YELLOW", image="luigi.jpg")
+        card3 = Card(self, color="RED", image="yoshi.jpg")
+        card4 = Card(self, color="BLUE", image="mario.jpg")
+        self.cards = [card1, card2, card3, card4]
 
-    def start_drag(evento: ft.DragStartEvent):
-        move_on_top(evento.control, controls)
-        solitaire.start_top = evento.control.top
-        solitaire.start_left = evento.control.left
-        evento.control.update()
+    def create_slots(self):
+        self.slots.append(Slot(top=0, left=0))
+        self.slots.append(Slot(top=0, left=200))
+        self.slots.append(Slot(top=0, left=300))
+        self.controls.extend(self.slots)
+        self.update()
 
-    def bounce_back(game, card):
-        card.top = game.start_top
-        card.left = game.start_left
-        pagina.update()
-        
-    def drop(evento: ft.DragEndEvent):
-        if abs(evento.control.top - slot.top) < 50 and abs(evento.control.left - slot.left) < 50:
-            place(evento.control, slot)
-        else:
-            bounce_back(solitaire, evento.control)
-            
-        evento.control.update()
+    def deal_cards(self):
+        self.controls.extend(self.cards)
 
-    def place(card, slot):
-        '''  Colocar o card no slot '''
-        card.top = slot.top
-        card.left = slot.left
-        pagina.update()
-
-    def move_on_top(card, controls):
-          controls.remove(card)
-          controls.append(card)
-          pagina.update()
-
-    
-    slot = ft.Container(
-        width=70,
-        height=100,
-        left=200,
-        top=0,
-        border=ft.Border.all(1),       
-    )
-
-    card1 = ft.GestureDetector(
-            mouse_cursor=ft.MouseCursor.MOVE,
-            drag_interval=5,
-            on_pan_start=start_drag,
-            on_pan_update=drag,
-            on_pan_end=drop,
-            left=0,
-            top=0,
-            content=ft.Container(bgcolor=ft.Colors.GREEN, width=70, height=100),
-    )
-
-    card2 = ft.GestureDetector(
-            mouse_cursor=ft.MouseCursor.MOVE,
-            drag_interval=5,
-            on_pan_start=start_drag,
-            on_pan_update=drag,
-            on_pan_end=drop,
-            left=100,
-            top=0,
-            content=ft.Container(bgcolor=ft.Colors.YELLOW, width=70, height=100),
-    )
-
-    solitaire = Solitaire()
-
-    controls = [slot, card1, card2]
-    pagina.add(ft.Stack(controls= controls, width=1000, height=500))   
-
-
-ft.run(main)
+        for card in self.cards:
+            card.place(self.slots[0])
+        self.update()
