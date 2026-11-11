@@ -11,5 +11,7 @@ for j in range(valor_B):
         total_B +=j
 
 print(f'Somas dos múltiplos de 3: {(total_A + total_B)}')
+
+print("Aperte 'Enter' para fechar...")
     
 
